@@ -1,7 +1,7 @@
 VENV_DIRECTORY=venv
 VENV_ACTIVATE=$(VENV_DIRECTORY)/bin/activate
 
-all: venv build
+all: venv migrate build
 
 build:
 
@@ -11,9 +11,13 @@ distclean: clean
 	rm -rfv\
 		$(shell find . -type f -name '*.pyc')\
 		$(VENV_DIRECTORY)\
+		db.sqlite3\
 
 migrate: venv
 	. $(VENV_ACTIVATE); python manage.py migrate
+
+migrations: venv
+	. $(VENV_ACTIVATE); python manage.py makemigrations
 
 runserver: venv migrate build
     # --insecure option forces serving of static files if DEBUG=False
