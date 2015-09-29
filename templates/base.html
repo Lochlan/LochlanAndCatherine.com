@@ -3,22 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>Lochlan & Catherine's Wedding: {% block page_title %}{% endblock %}</title>
+    <link href='https://fonts.googleapis.com/css?family=Pinyon+Script|Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href="/static/css/style.css" rel="stylesheet" >
 </head>
 
 <body>
-    <header>
-        <h1>Lochlan McIntosh & Catherine Montgomery</h1>
-    </header>
+    <div>
+        <header>
+            <h1>Lochlan McIntosh & Catherine Montgomery</h1>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+            </ul>
+        </nav>
 
-    <section>
-        {% block content %}{% endblock %}
-    </section>
+        <section>
+            {% block content %}{% endblock %}
+        </section>
+    <div>
 </body>
 </html>

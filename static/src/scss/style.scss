@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'Baskerville', 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pinyon Script', cursive;
+}
+
+nav {
+    background: black;
+    color: white;
+
+    > ul {
+        list-style-type: none;
+        padding: 0;
+
+        > li {
+            display: inline;
+            padding: 4px;
+
+            > a {
+                color: white;
+            }
+        }
+    }
+}
