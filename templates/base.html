@@ -17,10 +17,11 @@
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'event' %}">Event</a></li>
             </ul>
         </nav>
 
-        <section>
+        <section class="content">
             {% block content %}{% endblock %}
         </section>
     <div>
