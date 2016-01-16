@@ -1,42 +1,164 @@
+html {
+    height: 100%;
+}
 
 body {
+    background: #111;
+    box-sizing: border-box;
     font-family: 'Baskerville', 'Libre Baskerville', serif;
     font-size: 18px;
-    text-align: center;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 2000px;
+    position: relative;
 }
 
 address {
     font-style: normal;
 }
 
-h1 {
-    font-family: 'Pinyon Script', cursive;
+article {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 16px 20px;
+    text-align: justify;
 }
 
 dd {
     margin: 0;
 }
 
+h1, h2, h3 {
+    font-family: 'Dancing Script', cursive;
+}
+
 nav {
-    background: black;
-    color: white;
+    background: white;
+    box-sizing: border-box;
+    font-family: 'Dancing Script';
+    font-size: 28px;
+    height: 40px;
+    padding: 20px;
+    position: relative;
 
     > ul {
+        bottom: 0;
         list-style-type: none;
+        margin: 0;
         padding: 0;
+        position: absolute;
 
         > li {
             display: inline;
             padding: 4px;
 
             > a {
-                color: white;
+                color: black;
+                text-decoration: none;
             }
         }
     }
 }
 
+.background_photo {
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-width: 2000px;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.background_photo-default {
+    @extend .background_photo;
+    background-image: url('/static/images/backgrounds/sunny-couple.jpg');
+}
+
+.background_photo-about {
+    @extend .background_photo;
+    background-image: url('/static/images/backgrounds/looking-at-view.jpg');
+}
+
+.background_photo-event {
+    @extend .background_photo;
+    background-image: url('/static/images/backgrounds/rupert-and-ring.jpg');
+}
+
 .content {
-    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.monogram_container {
+    bottom: 20px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    width: 100px;
+
+    &::before {
+        background: white;
+        border-radius: 50%;
+        content: '';
+        height: 98%;
+        left: 1%;
+        opacity: 0.85;
+        position: absolute;
+        top: 1%;
+        width: 98%;
+    }
+}
+
+.monogram {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+// home
+
+.homepage_name_and_date {
+    bottom: 0%;
+    color: white;
+    max-width: 60%;
+    position: absolute;
+}
+
+// about page
+
+.content-about_page {
+    @extend .content;
+
+    position: absolute;
+    top: calc(100% - 120px);
+}
+
+.story {
+    width: 29%;
+
+    > h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.story-lochlan {
+    @extend .story;
+
+    float: left;
+}
+
+.story-catherine {
+    @extend .story;
+
+    float: right;
+}
+
+// event page
+
+.event_details {
     margin: 0 auto;
+    text-align: center;
+    width: 70%;
 }

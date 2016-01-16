@@ -2,28 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lochlan & Catherine's Wedding: {% block page_title %}{% endblock %}</title>
-    <link href='https://fonts.googleapis.com/css?family=Pinyon+Script|Libre+Baskerville:400,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="/static/css/style.css" rel="stylesheet" >
+
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Libre+Baskerville:400,400italic,700" rel="stylesheet" type="text/css">
+
+    <link href="/static/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <header>
-            <h1>Lochlan McIntosh & Catherine Montgomery</h1>
-        </header>
+    <div class="{% block photo %}background_photo-default{% endblock %}">
+        <div class="monogram_container">
+            <img
+                class="monogram"
+                src="/static/images/monogram.svg"
+            >
+        </div>
+    </div>
 
-        <nav>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'about' %}">About Us</a></li>
-                <li><a href="{% url 'event' %}">Event</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'event' %}">Event</a></li>
+        </ul>
+    </nav>
 
-        <section class="content">
-            {% block content %}{% endblock %}
-        </section>
-    <div>
+    <div class="{% block content_class %}content{% endblock %}">
+        {% block content %}{% endblock %}
+    </div>
 </body>
 </html>
