@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This script is executed after the application is started
+
+echo "--> ACTION HOOK: post_deploy <--"
