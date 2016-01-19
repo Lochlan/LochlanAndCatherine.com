@@ -22,7 +22,7 @@ VENV_ACTIVATE=$(VENV_DIRECTORY)/bin/activate
 
 # targets
 
-all: venv migrate build
+all: build
 
 build: css
 
