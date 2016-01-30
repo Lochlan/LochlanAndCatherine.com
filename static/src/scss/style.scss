@@ -161,4 +161,12 @@ nav {
     margin: 0 auto;
     text-align: center;
     width: 70%;
+
+    ul {
+        padding: 0;
+
+        > li {
+            list-style-type: none;
+        }
+    }
 }
