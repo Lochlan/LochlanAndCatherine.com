@@ -13,12 +13,8 @@
 
 <body>
     <div class="{% block photo %}background_photo-default{% endblock %}">
-        <div class="monogram_container">
-            <img
-                class="monogram"
-                src="/static/images/monogram.svg"
-            >
-        </div>
+        {% block background %}
+        {% endblock %}
     </div>
 
     <nav>
